@@ -71,7 +71,7 @@ class Signup extends React.Component {
     event.preventDefault()
     fetch('https://send.pageclip.co/FziJBDSPAY6oltMwgwowwcgLg2IDBJtz', {
       method: 'POST',
-      mode: 'no-cors',
+      mode: 'navigate',
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json'
