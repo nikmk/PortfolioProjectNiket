@@ -71,6 +71,7 @@ class Signup extends React.Component {
     event.preventDefault()
     fetch('https://send.pageclip.co/FziJBDSPAY6oltMwgwowwcgLg2IDBJtz', {
       method: 'POST',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json'
@@ -91,11 +92,11 @@ class Signup extends React.Component {
         console.log(response);
       })
 
-      .catch(function(error) {
-        this.setState({
-          notify:true,
-          status:false
-         })
+      .catch(async (error)  => {
+        // this.setState({
+        //   notify:true,
+        //   status:false
+        //  })
         console.error(error)
       })
   
