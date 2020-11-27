@@ -1,7 +1,6 @@
 
 import React from "react";
 // import {NotificationContainer, NotificationManager} from 'react-notifications';
-import Pageclip from "pageclip"
 
 
 import {
@@ -20,7 +19,6 @@ import {
   Col,
   
 } from "reactstrap";
-const pageclip = new Pageclip("api_OFZ3btM6zB03gBITbh8noVdso1yaANBt") 
 
 function Notify ({currentState,currentStatus}){
   if (currentState){
@@ -72,17 +70,15 @@ class Signup extends React.Component {
   }
   onSubmit(event) {
     event.preventDefault()
-    // fetch('https://send.pageclip.co/FziJBDSPAY6oltMwgwowwcgLg2IDBJtz', {
-    //   method: 'POST',
-    //   mode: 'cors',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     Accept: 'application/json'
-    //   },
-    //   body: JSON.stringify(this.state)
-    // })
-    pageclip.send({body: JSON.stringify(this.state)}).then((response) => {
-      console.log(response.status, response.data) // => 200, [{payload: {...}}]
+    fetch('https://send.pageclip.co/FziJBDSPAY6oltMwgwowwcgLg2IDBJtz', {
+      method: 'POST',
+      
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/plain',
+        Accept: 'text/plain'
+      },
+      body: JSON.stringify(this.state)
     })
       .then(async (response) => {
         this.setState({
