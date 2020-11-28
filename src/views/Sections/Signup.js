@@ -22,7 +22,7 @@ import {
 
 function Notify ({currentState,currentStatus,intialize}){
   if(intialize){
-    <h2 style={{color: "white", margin:"0 10%", backgroundColor: '#00ffff', textAlign: "center"}}>Sending...</h2>
+    return(<h2 style={{color: "white", margin:"0 10%", backgroundColor: '#00ffff', textAlign: "center"}}>Sending...</h2>)
   }else{
   if (currentState){
     if (currentStatus){
@@ -149,7 +149,7 @@ class Signup extends React.Component {
                     src={require("../../assets/img/square-purple-1.png")}
                   />
                   <CardTitle  tag="h3" style={{backgroundColor:'orange', marginLeft:'5%',marginRight:'5%',borderBottomLeftRadius:"2rem",borderBottomRightRadius:"2rem"}}>Contact me</CardTitle>
-                  <Notify currentState={this.state.notify} currentStatus={this.state.status}/>
+                  <Notify currentState={this.state.notify} currentStatus={this.state.status} intialize={this.state.intialize}/>
                   
                 </CardHeader>
                 
