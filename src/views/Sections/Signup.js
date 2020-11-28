@@ -148,7 +148,7 @@ class Signup extends React.Component {
                     alt="..."
                     src={require("../../assets/img/square-purple-1.png")}
                   />
-                  <CardTitle  tag="h3" style={{backgroundColor:'orange', marginLeft:'5%',marginRight:'5%',borderBottomLeftRadius:"2rem",borderBottomRightRadius:"2rem"}}>Contact me</CardTitle>
+                  <CardTitle  tag="h3" style={{backgroundColor:'orange', marginLeft:'2%',marginRight:'2%',borderBottomLeftRadius:"2rem",borderBottomRightRadius:"2rem"}}>Contact me</CardTitle>
                   <Notify currentState={this.state.notify} currentStatus={this.state.status} intialize={this.state.intialize}/>
                   
                 </CardHeader>
