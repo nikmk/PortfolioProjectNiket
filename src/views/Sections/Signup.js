@@ -70,13 +70,12 @@ class Signup extends React.Component {
   }
   onSubmit(event) {
     event.preventDefault()
-    fetch('https://send.pageclip.co/FziJBDSPAY6oltMwgwowwcgLg2IDBJtz', {
+    fetch('https://portfolionikmk.azurewebsites.net/api/ContactTrigger1', {
       method: 'POST',
-      
-      mode: 'no-cors',
+      // mode:'no-cors',
       headers: {
-        'Content-Type': 'text/plain',
-        Accept: 'text/plain'
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
       },
       body: JSON.stringify(this.state)
     })
@@ -90,8 +89,8 @@ class Signup extends React.Component {
           notify:true,
           status:true
         })
+        console.log(response)
 
-        console.log(response);
       })
 
       .catch(async (error)  => {
