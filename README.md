@@ -1,5 +1,7 @@
 # This is my portfolio website 
 
+Go to [https://niketkulkarni.tech](https://niketkulkarni.tech) to view in production.
+
 This website is purely made out of Reactjs.
 - Author - Niket Kulkarni
 
