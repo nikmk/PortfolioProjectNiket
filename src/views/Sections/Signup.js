@@ -181,7 +181,7 @@ class Signup extends React.Component {
                           <Col md="6">
                             <FormGroup>
                               <label htmlFor="phone">Phone</label>
-                              <Input placeholder="+00-1234567890" type="tel" name="phone" pattern="[+]{1}[0-9]{2}-[0-9]{10}"
+                              <Input placeholder="+001234567890" type="tel" name="phone" pattern="[+]{1}[0-9]{2}[0-9]{10}"
                                 value={this.state.phone}
                                 onChange={this.onChange}
                                 required={true}
