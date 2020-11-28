@@ -112,7 +112,7 @@ class PagesNavbar extends React.Component {
                     className="navbar-toggler"
                     onClick={this.toggleCollapse}
                   >
-                    <i className="fas fa-airbnb"></i>
+                    <i className="fas fa-asterisk"></i>
                   </button>
                 </Col>
               </Row>
