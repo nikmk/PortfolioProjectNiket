@@ -17,12 +17,9 @@ class PageHeader extends React.Component {
         <div className="squares square7" />
         <Container>
           <div className="content-center brand">
-            <h1 className="h1-seo">Hello there</h1>
+            <h1 className="h1-seo">Hi• there</h1>
             <h4 className=" d-none d-block">
-              Welcome to my portfolio website. Well I try to encompass the best 
-              of the projects I've done till now in this website. The live preview of all 
-              my projects is available on my github repository. This Portfolio consists only 
-              some snapshots of my previous projects.
+              This is Niket over here! The creator of this portfolio webapp.
             </h4>
           </div>
         </Container>

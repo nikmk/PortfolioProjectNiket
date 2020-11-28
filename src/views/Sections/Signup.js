@@ -20,7 +20,10 @@ import {
   
 } from "reactstrap";
 
-function Notify ({currentState,currentStatus}){
+function Notify ({currentState,currentStatus,intialize}){
+  if(intialize){
+    <h2 style={{color: "white", margin:"0 10%", backgroundColor: '#00ffff', textAlign: "center"}}>Sending...</h2>
+  }else{
   if (currentState){
     if (currentStatus){
     return(
@@ -33,7 +36,7 @@ function Notify ({currentState,currentStatus}){
       <div></div>
     )
   }
-   
+}
 }
 
 
@@ -49,7 +52,8 @@ class Signup extends React.Component {
       company:'',
       message:'',
       notify: false,
-      status: false
+      status: false,
+      intialize: false
 
     }
 
@@ -69,6 +73,7 @@ class Signup extends React.Component {
       })
   }
   onSubmit(event) {
+    this.setState({intialize:true})
     event.preventDefault()
     fetch('https://portfolionikmk.azurewebsites.net/api/ContactTrigger1', {
       method: 'POST',
@@ -87,7 +92,8 @@ class Signup extends React.Component {
           company:'',
           message:'',
           notify:true,
-          status:true
+          status:true,
+          intialize:false
         })
         console.log(response)
 
@@ -121,20 +127,19 @@ class Signup extends React.Component {
                     </CardHeader>
                     
               <h3 className="display-3 text-white">
-                A devloper who likes all fields{" "}
-                <span className="text-white">and tries to learn everything he can</span>
+                A developer {" "}
+                <span className="text-white">and a human being</span>
               </h3>
               <p className="text-white mb-3">
-                I try to read from every branch of science and non-science in my 
-                free time. Whether its humanities or commerce or something related to art 
-                and history. I read about philosophy and the state of mind in various 
-                situations. I believe all fields are multi-disciplinary and 
-                any change in one field can cause rippling effects in others.
+                What makes a good product is one that knows what 
+                problem it solves specifically. If that problem is 
+                humane in nature then the product will find its way 
+                in the market.
               </p>
             </Col>
-            <div className="squares square-2" />
-          {/* <div className="squares square-" /> */}
             <CardBody>
+            <div className="squares square-1" />
+            <div className="squares square-2" />
             <Col className="mb-lg-auto" lg="6">
               <Card className="card-register">
               <Form onSubmit={this.onSubmit}>
@@ -143,7 +148,7 @@ class Signup extends React.Component {
                     alt="..."
                     src={require("../../assets/img/square-purple-1.png")}
                   />
-                  <CardTitle tag="h4" style={{backgroundColor:'orange'}}>Contact me</CardTitle>
+                  <CardTitle  tag="h3" style={{backgroundColor:'orange', marginLeft:'5%',marginRight:'5%',borderBottomLeftRadius:"2rem",borderBottomRightRadius:"2rem"}}>Contact me</CardTitle>
                   <Notify currentState={this.state.notify} currentStatus={this.state.status}/>
                   
                 </CardHeader>
@@ -214,7 +219,7 @@ class Signup extends React.Component {
             
           </CardBody>
           <div className="squares square-3" />
-          <div className="squares square-4" />
+          
           </Card>
           </Row>
         </Container>
